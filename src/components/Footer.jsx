@@ -4,7 +4,7 @@ const Footer = () => {
 
 	return (
 		<div className="h-8 bg-slate-900 text-orange-300">
-            Project By:
+            Project By: Noman Ali
 		</div>
 	);
 }
