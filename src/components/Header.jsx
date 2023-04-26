@@ -1,15 +1,34 @@
 import React from 'react';
-import Container from './Container';
-import { NavLink as RouterLink } from 'react-router-dom';
+import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
-export default function Header() {
+const Header = () => {
+
+	const [currentPage, setCurrentPage] = useState('Home')
+
 	return (
-		<Container className="bg--300">
-			<nav className="flex gap-4">
-				<RouterLink className="test" to="/">
-					Home
-				</RouterLink>
+		<div className="h-16 bg-slate-900">
+			<nav className="h-full px-8 flex gap-6 items-center content-center justify-items-center">
+				<Link 
+				className="text-orange-300 text-xl hover:text-orange-100" 
+				to="/"
+				onClick={() => setCurrentPage('Home')}>
+					<div className={currentPage === 'Home' ? 'font-bold' : ''}>
+						Home
+					</div>
+				</Link>
+
+				<Link 
+				className="text-orange-300 text-xl hover:text-orange-100" 
+				to="create"
+				onClick={() => setCurrentPage('Create')}>
+					<div className={currentPage === 'Create' ? 'font-bold' : ''}>
+						Create
+					</div>
+				</Link>
 			</nav>
-		</Container>
+		</div>
 	);
 }
+
+export default Header;

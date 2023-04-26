@@ -9,7 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.6.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@reduxjs/toolkit": "^1.9.5",
     "eslint": "^8.38.0",
+    "framer-motion": "^10.12.4",
     "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
